@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        input { padding: 8px; margin: 5px; }
+        button { padding: 8px 12px; margin: 5px; cursor: pointer; }
+        table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+        table, th, td { border: 1px solid #ccc; }
+        th, td { padding: 10px; text-align: center; }
+        .edit-btn { background: orange; color: white; }
+        .delete-btn { background: red; color: white; }
+        .save-btn { background: green; color: white; }
+    </style>
+</head>
+<body>
+
+
+    <h2>Student Profile Manager</h2>
+
+<h3>Create / Update Student</h3>
+
+<input type="hidden" id="studentId">
+<input type="text" id="name" placeholder="Name">
+<input type="email" id="email" placeholder="Email">
+<input type="number" id="age" placeholder="Age">
+
+<button class="save-btn" onclick="saveStudent()">Save</button>
+
+<hr>
+
+<h3>All Students</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody id="studentTable"></tbody>
+</table>
+
+<!-- Link external JS -->
+<script src="index.js"></script>
+
+
+    
+</body>
+</html>
